@@ -1,0 +1,28 @@
+type Query{
+	getBook(id:String!):Book
+	getBooks:[Book]
+}
+
+type Mutation{
+	createBook(name:String, pages:Int,price:Int,publisher:String,isSoftCopy:Boolean,edition:Int,bookOpenDate:String,authorName:String,age:Int):String
+}
+
+type Book {
+	id:Int
+	name:String
+	pages:Int
+	price:Int
+	publisher:String
+	isSoftCopy:Boolean
+	edition:Int
+	bookOpenDate:String
+	author:Author
+}
+
+type Author {
+    id:String
+    name:String
+    age:Int
+
+
+}
